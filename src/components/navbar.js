@@ -1,9 +1,10 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useState, useEffect, handleClick} from "react"
 import {FaBars, FaTimes} from "react-icons/fa"
 import {IconContext} from "react-icons/lib"
 import styled from 'styled-components'
+import { DiScala } from "react-icons/di";
 
 
 //styled components 
@@ -69,7 +70,7 @@ const Navbar = () => {
     const [scroll, setScroll] = useState(false)
 
     const changeNav = () => {
-        if (window,scrollY >= 80) {
+        if (window.scrollY >= 80) {
             setScroll(true)
         } else{
             setScroll(false)
