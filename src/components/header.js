@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import {FaBars, FaTimes} from ""
+
 
 const Header = ({ siteTitle }) => (
   <header
