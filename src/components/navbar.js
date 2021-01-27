@@ -1,5 +1,4 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React, {useState, useEffect, handleClick} from "react"
 import {FaBars, FaTimes} from "react-icons/fa"
 import {IconContext} from "react-icons/lib"
@@ -86,14 +85,13 @@ const Navbar = () => {
         <IconContext.Provider value={{color: "#141414"}}> 
         <Nav active={scroll} click={click}>
             <NavbarContainer>
-                <NavLogo>
-                     <NavIcon>
-                        EXPLOR
-                    </NavIcon>
+                <NavLogo to="/">
+                     <NavIcon />
+                     EXPLOR
                 </NavLogo>
 
                 <MobileIcon onClick={handleClick}>
-                    {click ? <FaTimes/> : <FaBars></FaBars>}
+                    {click ? <FaTimes/> : <FaBars/>}
                 </MobileIcon>
             </NavbarContainer>
         </Nav> 
